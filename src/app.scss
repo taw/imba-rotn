@@ -1,0 +1,19 @@
+@import 'normalize-scss';
+@include normalize();
+
+.App {
+  display: flex;
+  justify-content: space-around;
+
+  header {
+    font-size: 64px;
+    text-align: center;
+  }
+  textarea {
+    min-width: 50vw;
+    min-height: 100px;
+  }
+  th {
+    padding-right: 5px;
+  }
+}
