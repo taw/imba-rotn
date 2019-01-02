@@ -1,6 +1,6 @@
 # imba-rotn
 
-ROT-N app in Imba.
+ROT-N app in Imba. [You can see in in action here](https://taw.github.io/imba-rotn).
 
 ## Install dependencies
 
