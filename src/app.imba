@@ -12,12 +12,25 @@ tag App
       else
         c
 
+  def upload(event)
+    let file = event.native:target:files[0]
+    return unless file
+    let reader = FileReader.new
+
+    reader:onload = do |event|
+      @text = event:target:result
+      @error = nil
+      Imba.commit
+    reader.read-as-text(file)
+
   def render
     <self>
       <div.contents>
         <header>
           "ROT-N"
         <textarea[@text]>
+        <div>
+          <input#file type="file" :change.upload>
         <table>
         for i in [1..25]
           <tr .{"rot-{i}"}>
