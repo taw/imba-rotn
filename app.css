@@ -404,7 +404,9 @@ template {
 
 .App {
   display: flex;
-  justify-content: space-around; }
+  justify-content: space-around;
+  max-width: 1000px;
+  margin: auto; }
   .App header {
     font-size: 64px;
     text-align: center; }
