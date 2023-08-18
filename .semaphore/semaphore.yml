@@ -11,8 +11,10 @@ blocks:
         - name: Test
           commands:
             - checkout
-            - sem-version node 18
+            - 'sem-version node 16 # won''t work on newer versions'
             - cache restore
             - npm install
+            - npx cypress install
             - cache store
-            - npm test
+            - npm run dev &
+            - npx cypress run
